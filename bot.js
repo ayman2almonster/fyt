@@ -1,4 +1,4 @@
-const discord_token = "BOT_TOKEN";
+const discord_token = "token";
 const prefix = "%"
 client.login(discord_token);
 client.on('message', message => {
