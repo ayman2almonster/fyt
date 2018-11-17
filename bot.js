@@ -1,6 +1,15 @@
-const discord_token = "token";
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const prefix = "%"
-client.login(discord_token);
+client.on('ready', () => {
+  console.log('╔[════════════════════════════════════]╗');
+  console.log('            ╔[════════════]╗')
+  console.log('           ELBobBot Is Online')
+  console.log('            ╚[════════════]╝')
+  console.log('╚[════════════════════════════════════]╝');
+});
+
+
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
@@ -27,3 +36,7 @@ if (message.content.startsWith(prefix + 's')) {
 }
 
 });
+
+
+
+client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
